@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tVH-YF-w6m">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Cards Collection View Controller-->
+        <scene sceneID="QcH-3Q-hIB">
+            <objects>
+                <collectionViewController id="4uj-Bk-Bdb" customClass="CardsCollectionViewController" customModule="DeckOfCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LtD-Ue-gtI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="SW3-Vm-LDa">
+                            <size key="itemSize" width="150" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="10"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="BC2-bB-Xiw" customClass="CardCollectionViewCell" customModule="DeckOfCards" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="74" width="150" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wuw-7l-La8">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SDi-dS-3gB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="174"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="174" id="Va9-Vk-Xc5"/>
+                                                        <constraint firstAttribute="width" constant="150" id="h13-Ee-3dg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsw-2z-u9p">
+                                                    <rect key="frame" x="0.0" y="174" width="150" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="dRZ-DT-KBz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Wuw-7l-La8" firstAttribute="top" secondItem="BC2-bB-Xiw" secondAttribute="top" id="8zk-6Z-gqh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wuw-7l-La8" secondAttribute="trailing" id="EeO-ru-Onx"/>
+                                    <constraint firstItem="Wuw-7l-La8" firstAttribute="leading" secondItem="BC2-bB-Xiw" secondAttribute="leading" id="Kzm-ih-fC5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wuw-7l-La8" secondAttribute="bottom" id="MRw-4D-Me5"/>
+                                    <constraint firstItem="Wuw-7l-La8" firstAttribute="top" secondItem="BC2-bB-Xiw" secondAttribute="top" id="Vt4-v3-pD2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wuw-7l-La8" secondAttribute="trailing" id="YQd-hK-YEW"/>
+                                    <constraint firstItem="Wuw-7l-La8" firstAttribute="leading" secondItem="BC2-bB-Xiw" secondAttribute="leading" id="xY7-yg-bdM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cardLabel" destination="Nsw-2z-u9p" id="cLs-ch-AjB"/>
+                                    <outlet property="imageView" destination="SDi-dS-3gB" id="5vk-Zd-Mhr"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerCell" id="Ixq-oC-LkZ">
+                            <rect key="frame" x="0.0" y="64" width="600" height="10"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="4uj-Bk-Bdb" id="Vcc-n6-rAc"/>
+                            <outlet property="delegate" destination="4uj-Bk-Bdb" id="r4q-PZ-NgP"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Dcr-E1-0Af">
+                        <barButtonItem key="rightBarButtonItem" title="Shuffle" id="Sg0-VB-PAD">
+                            <connections>
+                                <action selector="shuffleCardsButtonTapped:" destination="4uj-Bk-Bdb" id="70Q-q6-2fI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDG-CI-opB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="432"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OrS-pq-9C4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tVH-YF-w6m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p54-rB-gyg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4uj-Bk-Bdb" kind="relationship" relationship="rootViewController" id="V3f-1o-faL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8F3-w3-f8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="432"/>
+        </scene>
+    </scenes>
+</document>
